@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        var css = '<link rel="stylesheet" href="./css/index2.css?v=?v=' + Math.random() + '">';
+        document.write(css);
+    </script>
+
+    <title>昌通码一屏展码</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="label_ok">打卡成功：</div>
+        <input type="text" class="sign_place" value="南昌大学第一附属医院">
+
+        <input type="text" class="sign_name" value="胡小天">
+        <input type="text" class="sign_id" value="360102********1329">
+        <div class="label_address">地址：</div>
+        <div class="label_self">本人</div>
+        <input type="text" class="sign_address" value="东湖区 大院街道 公园">
+        <div class="show_time"></div>
+        <div class="label_acid_test">核酸检测</div>
+        <div class="label_acid_x">X</div>
+        <div class="label_acid_hour">小时</div>
+        <div class="label_acid_negative">阴性</div>
+        <div class="label_acid_lab">宜春佰延医学检验室</div>
+        <div class="label_acid_time">222</div>
+
+        <div class="label_vaccine">疫苗接种</div>
+        <div class="label_refresh">刷新</div>
+        <div class="label_vaccine_x">2</div>
+        <div class="label_vaccine_x2">针</div>
+        <div class="label_vaccine_place">南昌市第九医院狂犬疫苗预防接种门诊</div>
+        <div class="label_vaccine_time">222</div>
+        <img src="./pic/bg_real.png" alt="">
+    </div>
+</body>
+
+</html>
+
+<script>
+    function get_random(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    var t = null;
+    t = setTimeout(time, 1000);
+    function time() {
+        clearTimeout(t);
+        dt = new Date();
+        var y = dt.getFullYear();
+        var mt = dt.getMonth() + 1;
+        if (mt < 10) {
+            mt = '0' + mt;
+        }
+        var day = dt.getDate();
+        var h = dt.getHours();
+        if (h < 10) {
+            h = '0' + h;
+        }
+        var m = dt.getMinutes();
+        if (m < 10) {
+            m = '0' + m;
+        }
+        var s = dt.getSeconds();
+        if (s < 10) {
+            s = '0' + s;
+        }
+        document.querySelector(".show_time").innerHTML = y + '-' + mt + "-" + day + " " + h + ":" + m + ":" + s;
+        document.querySelector(".label_acid_x").innerHTML = past;
+        t = setTimeout(time, 1000);
+    }
+
+    // time_for_acid
+    dt = new Date();
+    var y = dt.getFullYear();
+    var mt = dt.getMonth() + 1;
+    var day = dt.getDate();
+    var past = get_random(1, 5);
+    var h = dt.getHours() - past;
+    var m = get_random(0, 59);
+    var s = get_random(0, 59);
+    if (mt < 10) {
+        mt = '0' + mt;
+    }
+
+    if (h < 0) {
+        h = 0;
+        past = dt.getHours();
+    }
+    else if (h < 10) {
+        h = '0' + h;
+    }
+
+    if (m < 10) {
+        m = '0' + m;
+    }
+
+    if (s <  10) {
+        s = '0' + s;
+    }
+
+    document.querySelector(".label_acid_time").innerHTML = y + '-' + mt + "-" + day + " " + h + ":" + m + ":" + s;
+    
+    var vaccine_y = y - 1;
+    var vaccine_mt = mt - 6;
+    var vaccine_day = get_random(0, 28);
+    var vaccine_h = get_random(8, 12);
+    var vaccine_m = get_random(0, 59);
+    var vaccine_s = get_random(0, 59);
+    if (vaccine_mt < 0) {
+        vaccine_mt += 12;
+    }
+    if (vaccine_mt < 10) {
+        vaccine_mt = '0' + vaccine_mt;
+    }
+    if (vaccine_day < 10) {
+        vaccine_day = '0' + vaccine_day;
+    }
+    if (vaccine_h < 10) {
+        vaccine_h = '0' + vaccine_h;
+    }
+    if (vaccine_m < 10) {
+        vaccine_m = '0' + vaccine_m;
+    }
+    if (vaccine_s < 10) {
+        vaccine_s = '0' + vaccine_s;
+    }
+    document.querySelector(".label_vaccine_time").innerHTML = vaccine_y + '-' + vaccine_mt + "-" + vaccine_day + " " + vaccine_h + ":" + vaccine_m + ":" + vaccine_s;
+
+
+    flag = 0;
+
+    function fn() {
+        var alpha = 100;
+        var oDiv = document.getElementById('blk');
+        oDiv.style.filter = 'alpha(opacity:'+alpha+')';
+        if (flag == 0) {
+            oDiv.style.opacity = 1.0;
+            flag = 1;
+        }
+        else if (flag == 1) {
+            oDiv.style.opacity = 0.0;
+            flag = 0;
+        }
+    }
+
+
+</script>
