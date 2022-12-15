@@ -1,0 +1,191 @@
+.main {
+    /* background-image: url(../pic/bg.jpg); */
+    /* left: 25%; */
+    position: absolute;
+}
+
+.label_ok {
+    position: absolute;
+    left: 19%;
+    /* top: 6em; */
+    top: 93px;
+    font-size: 3.7em;
+    color: white;
+}
+
+.sign_place {
+    position: absolute;
+    left: 44%;
+    /* top: 6em; */
+    top: 90px;
+    font-size: 3.7em;
+    color: white;
+    width: 12em;
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.sign_name {
+    position: absolute;
+    left: 22%;
+    /* top: 6em; */
+    top: 310px;
+    font-size: 3.7em;
+    background-color: rgba(0, 0, 0, 0);
+    width: 4em;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.sign_id {
+    position: absolute;
+    left: 55%;
+    top: 330px;
+    font-size: 2.2em;
+    background-color: rgba(0, 0, 0, 0);
+    width: 10em;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.sign_address {
+    position: absolute;
+    left: 32%;
+    top: 395px;
+    font-size: 2.6em;
+    background-color: rgba(0, 0, 0, 0);
+    width: 10em;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.label_address {
+    position: absolute;
+    left: 22.5%;
+    top: 400px;
+    font-size: 2.5em;
+}
+
+.label_self {
+    position: absolute;
+    left: 41.2%;
+    font-size: 3.3em;
+    top: 313px;
+}
+
+.show_time {
+    font-size: 2.6em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 509px;
+    z-index: 999;
+}
+
+.label_acid_test {
+    position: absolute;
+    left: 20.3%;
+    font-size: 3.0em;
+    bottom: 705px;
+}
+
+.label_acid_hour {
+    position: absolute;
+    left: 28.5%;
+    font-size: 3.0em;
+    bottom: 625px;    
+}
+
+.label_acid_negative {
+    position: absolute;
+    left: 28.5%;
+    font-size: 3.0em;
+    bottom: 568px;
+    color: rgb(73, 153, 92);
+}
+
+.label_acid_lab {
+    position: absolute;
+    left: 11%;
+    font-size: 2.5em;
+    bottom: 487px;
+    color: rgb(106, 106, 106);
+}
+
+.label_acid_x {
+    position: absolute;
+    left: 21%;
+    font-size: 7em;
+    bottom: 560px;
+    color: rgb(73, 153, 92);
+}
+
+.label_acid_time {
+    font-size: 2.3em;
+    position: absolute;
+    left: 12%;
+    /* transform: translateX(-50%); */
+    color: rgb(176, 176, 176);
+    bottom: 425px;
+    z-index: 999;
+}
+
+.label_acid_hour {
+    position: absolute;
+    left: 28.5%;
+    font-size: 3.0em;
+    bottom: 625px;    
+}
+
+
+.label_vaccine {
+    position: absolute;
+    left: 64%;
+    font-size: 3.0em;
+    bottom: 705px;
+}
+
+.label_refresh {
+    position: absolute;
+    right: 9%;
+    font-size: 3.0em;
+    bottom: 705px;
+    color: rgb(16, 124, 222);
+}
+
+.label_vaccine_x {
+    position: absolute;
+    right: 28%;
+    font-size: 7em;
+    bottom: 552px;
+    color: rgb(73, 153, 92);
+}
+
+.label_vaccine_x2 {
+    position: absolute;
+    right: 19%;
+    font-size: 6em;
+    bottom: 564px;
+    /* color: rgb(73, 153, 92); */
+}
+
+.label_vaccine_place {
+    position: absolute;
+    text-align: center;
+    width: 530px;
+    height: 120px;
+    border-radius: 5px;
+    border-color: black;
+
+    right: 4.2%;
+    font-size: 2.4em;
+    bottom: 410px;
+    color: rgb(106, 106, 106);
+}
+
+.label_vaccine_time {
+    font-size: 2.3em;
+    position: absolute;
+    right: 12%;
+    /* transform: translateX(-50%); */
+    color: rgb(176, 176, 176);
+    bottom: 375px;
+    z-index: 999;
+}
